@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* PC、スマホ共通スタイル */
+body{
+  background-color: #ffffff;
+  /* Google fontを適用 */
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ==============
+　PC用スタイル
+================= */
+/* iPad-miniのサイズ：デベロッパーツールの数字が768x1024なので、数字を変えている  */
+@media screen and (min-width: 768px) {
+
+/* header */
+h1{
+  font-size: 34px;
+}
+header {
+  max-width: 598px;
+  height: auto;
+  display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  margin: 15px auto;
+}
+#h1-mp{
+  line-height: 69px;
+  width: 220px;
+  height: 69px;
+  border: solid 1px #000000;
+  text-align: center;
+}
+header > div{
+  display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  align-items: center;
+  min-width: 246px;
+}
+
+/* 画像セクション */
+img{
+  width: 100%;
+  height: auto;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0 auto 50px auto;
+}
+
+/* Aboutセクション */
+#about > h1{
+  width: 100%;
+  margin: 0 auto 22px auto;
+  text-align: center;
+}
+/* 写真と名前、箇条書きをグループ化するdiv */
+#about > div{
+  display: flex;
+    justify-content: space-between;
+  width: 598px;
+  margin: 0 auto;
+}
+/* 自己紹介：写真 */
+#about > div > img{
+  width: 142px;
+  height: 142px;
+  border-radius: 71px 71px 71px 71px;
+}
+/* About内：名前 */
+#about > h2{
+  font-size: 24px;
+  width: 405px;
+  height: 33px;
+  margin-bottom: 13px;
+}
+/* 自己紹介(箇条書き部) */
+#about > div > div{
+  width: 405px;
+  font-size: 18px;
+  margin-bottom: 44px;
+}
+
+/* Worksセクション */
+#works{
+  width: 598px;
+  margin: 0 auto 32px auto;
+}
+#works > h1{
+  width: 100%;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+#works > div{
+  display: flex;
+  justify-content: space-between;
+}
+/* 写真とテキストをグループ化するdiv */
+#works > div > div{
+  width: 33%;
+  text-align: center;
+}
+/* 写真と説明 */
+.works-photo{
+  width: 179px;
+  height: 134px;
+  margin-bottom: 27px;
+}
+#works > div > div > p{
+  font-size: 18px;
+}
+/* footer設定 */
+footer{
+  margin-bottom: 30px;
+  text-align: center;
+}
+footer > p{
+  /* デフォルトの余白を削除???? */
+  margin: 0;
+}
+
+}
+
+/* ==============
+　スマホ用スタイル
+================= */
+/* iPad-miniのサイズ：デベロッパーツールの数字が768x1024なので、数字を変えている  */
+@media screen and (max-width: 767px) {
+
+body{
+  width: 100%;
+  margin: 0;
+}
+h1{
+  font-size: 34px;
+  color: #000000;
+  
+}
+
+/* header */
+header{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  width: 100%;
+  height: 109px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* MyProfile部 */
+#h1-mp{
+  border: solid 1px #000000;
+  width: 220px;
+  height: 69px;
+  line-height: 69px;
+  text-align: center;
+  float: left;
+}
+/* About Works */
+header > div{
+  display: flex;
+    justify-content: space-between;
+  width: 231px;
+  height: 69px;
+  float: right;
+  line-height: 69px;
+}
+
+/* About (スマホ用) */
+/* メイン写真 */
+#image-main{
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+/* 自己紹介 */
+/* Aboutセクション */
+#about > h1{
+  width: 100%;
+  margin: 0 auto 22px auto;
+  text-align: center;
+}
+/* 写真と名前、箇条書きをグループ化するdiv */
+#about > div{
+  display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  width: 100%;
+  /* autoでセンターに持ってきた方がよいか？ */
+  margin: 0 auto 45px 20px;
+}
+/* 自己紹介：写真 */
+#about > div > img{
+  /* 142px x 141pxとなっていたが、142pxに合わせた（radiusの計算がしやすい) */
+  width: 142px;
+  height: 142px;
+  border-radius: 71px 71px 71px 71px;
+  box-sizing: border-box;
+  margin-right: 30px;
+}
+/* About内：名前 */
+#about > h2{
+  font-size: 24px;
+  height: 33px;
+  margin-bottom: 0 auto 13px auto;
+  text-align: center;
+}
+/* 自己紹介(箇条書き部) */
+#about > div > div{
+  font-size: 18px;
+}
+
+/* Worksセクション */
+#works{
+  width: 100%;
+  margin: 0 auto 52px auto;
+}
+#works > h1{
+  width: 100%;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+/* 写真とテキストをグループ化するdiv */
+#works > div > div{
+  text-align: center;
+  margin: 0 20px 6px 20px;
+  padding: 40px;
+
+}
+/* 写真と説明 */
+.works-photo{
+  width: 100%;
+  height: auto;
+  margin-bottom: 17px;
+}
+#works > div > div > p{
+  font-size: 18px;
+}
+
+/* footer設定 */
+footer{
+  margin-bottom: 30px;
+  text-align: center;
+}
+footer > p{
+  /* デフォルトの余白を削除???? */
+  margin: 0;
+}
+}
